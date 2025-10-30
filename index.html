@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Misha AI</title>
+  <link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#7c4dff">
+  <link rel="stylesheet" href="style.css" />
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <header id="chatHeader" class="hidden">
+    <div class="header-left">
+      <img src="https://i.postimg.cc/g0mCyGxs/1000103723-removebg-preview.png" alt="Misha AI" class="profile-pic">
+      <div>
+        <h1 class="app-title">Misha AI</h1>
+        <span class="status">online</span>
+      </div>
+    </div>
+    <div class="menu">
+      <button id="menuBtn">⋮</button>
+      <div id="dropdownMenu" class="dropdown hidden">
+        <button id="newChat">Chat Baru</button>
+        
+        <button id="changeToken">Token</button>
+        <button id="clearChat">Hapus Semua Chat</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="welcomeScreen">
+    <img src="https://i.postimg.cc/g0mCyGxs/1000103723-removebg-preview.png" alt="Misha AI" class="welcome-pic" />
+    <h1>👋 Halo! Aku <span>Misha AI</span></h1>
+    <p>Asisten Cantik, Imut dan Cerdas siap menemanimu ngobrol 💬</p>
+    <div class="start-chat">
+      <input type="text" id="firstMessage" placeholder="Ketik pesan pertamamu..." />
+      <button id="startChatBtn">Kirim</button>
+    </div>
+  </main>
+
+  <main id="chatContainer" class="hidden">
+    <div id="chatMessages" class="chat-messages"></div>
+    <div class="chat-input">
+      <input type="text" id="userInput" placeholder="Tulis pesan..." />
+      <button id="sendBtn">Kirim</button>
+    </div>
+  </main>
+
+  <footer>
+    Made with — Misha -AI
+  </footer>
+  <script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => {
+      navigator.serviceWorker
+        .register("./service-worker.js")
+        .then(() => console.log("✅ Service Worker terdaftar!"))
+        .catch(err => console.log("❌ Gagal daftar Service Worker:", err));
+    });
+  }
+</script>
+</body>
+</html>

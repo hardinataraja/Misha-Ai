@@ -1,0 +1,23 @@
+{
+  "name": "Misha AI",
+  "short_name": "MishaAI",
+  "description": "Asisten Cantik, Imut dan Cerdas siap menemanimu ngobrol 💬",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#14131a",
+  "theme_color": "#7c4dff",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "https://i.postimg.cc/g0mCyGxs/1000103723-removebg-preview.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "https://i.postimg.cc/g0mCyGxs/1000103723-removebg-preview.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
